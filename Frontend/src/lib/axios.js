@@ -1,7 +1,8 @@
 import axios from "axios"
 
+const Base_URL = import.meta.env.MODE === "production" ? "/" : "http://localhost:5001/api"
 const api=axios.create({
-    baseURL : "http://localhost:5001/api"
+    baseURL : Base_URL
 })
 
 export default api 
