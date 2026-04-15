@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently \"npm run dev --prefix Backend\" \"npm run dev --prefix Frontend\"",
     "build": "npm install --prefix Frontend && npm install --prefix Backend && npm run build --prefix Frontend",
     "start": " npm run start --prefix Backend"
   },
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Huzaima720/mern-thinkboard/issues"
   },
-  "homepage": "https://github.com/Huzaima720/mern-thinkboard#readme"
+  "homepage": "https://github.com/Huzaima720/mern-thinkboard#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
 }
